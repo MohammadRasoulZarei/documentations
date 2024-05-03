@@ -1,0 +1,61 @@
+Expression                    Will match 
+-------------------------------------------------------------------
+foo                           The string "foo"
+ 
+^foo                          "foo" at the start of a line
+ 
+foo$                          "foo" at the end of a line
+ 
+^foo$                         "foo" when it is alone on a line
+ 
+[Ff]oo                        "Foo" or "foo"
+ 
+[abc]                         a, b, or c
+ 
+[^abc]                        d, e, f, g, V, %, ~, 5, etc.everything that is not a, b, or c (^ is "not" inside character classes)
+ 
+[A-Z]                         Any uppercase letter
+ 
+[a-z]                         Any lowercase letter
+ 
+[A-Za-z]                      Any letter
+ 
+[A-Za-z0-9]                   Any letter or number
+ 
+[A-Z]+                        One or more uppercase letters
+ 
+[A-Z]*                        Zero or more uppercase letters
+ 
+[A-Z]?                        Zero or one uppercase letters
+ 
+[A-Z]{3}                      Three uppercase letters
+ 
+[A-Z]{3,}                     A minimum of three uppercase letters
+ 
+[A-Z]{1,3}                    One, two, or three uppercase letters
+ 
+[^0-9]                        Any non-numeric character
+ 
+[^0-9A-Za-z]                  Any symbol (not a number or a letter)
+ 
+(cat|sat)                     Matches either "cat" or "sat"
+ 
+([A-Z]{3}|[0-9]{4})           Matches three letters or four numbers
+ 
+Fo*                           F, Fo, Foo, Fooo, Foooo, etc.
+ 
+Fo+                           Fo, Foo, Fooo, Foooo, etc.
+ 
+Fo?                           F, Fo
+ 
+.                             Any character except \n (new line)
+ 
+\b                            A word boundary; e.g. te\b matches the "te" in "late" but not the "te" in "tell."
+ 
+\B                            A non-word boundary; "te\B" matches the "te" in "tell" but not the "te" in "late."
+ 
+\n                            Newline character
+ 
+\s                            Any whitespace (new line, space, tab, etc.)
+ 
+\S                            Any non-whitespace character
