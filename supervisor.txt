@@ -1,0 +1,20 @@
+tip1- its only one file that we put our commands in.
+
+sudo supervisorctl reread
+sudo supervisorctl update
+-----------
+sudo supervisorctl start sap_worker_1 || all
+sudo supervisorctl restart
+
+-----example of command-----
+[program:barez]
+command=php /opt/shop.barez.org/artisan queue:work --queue=sap,tipax
+autostart=true
+autorestart=true
+user=root
+redirect_stderr=true
+stopwaitsecs=3600
+
+stdout_logfile=/var/log/supervisor/barez.log
+stdout_logfile_maxbytes=2MB
+stdout_logfile_backups=5
